@@ -4,16 +4,71 @@ body {
   background-color: #ffffff;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul,
 ol {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 /* ============ HEADER STYLES ============ */
+
+.header {
+  border-bottom: 1px solid #E7E9FC;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -22,10 +77,16 @@ ol {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 
 .logo-part {
   color: #2e2f42;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
 }
 
 .nav-link {
@@ -34,6 +95,9 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: block;
 }
 
 .nav-link:hover,
@@ -43,6 +107,12 @@ ol {
 
 .address {
   font-style: normal;
+  margin-left: auto;
+}
+
+.address-list {
+  display: flex;
+  gap: 40px;
 }
 
 .address-link {
@@ -51,6 +121,8 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .address-link:hover,
@@ -63,6 +135,11 @@ ol {
 /* ============ HERO STYLES ============ */
 .hero {
   background-color: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .main-taitle {
@@ -74,6 +151,9 @@ ol {
   text-align: center;
   color: #ffffff;
 
+  max-width: 496px;
+  min-width: 120px;
+  margin: 0 auto 48px auto;
 
 }
 
@@ -85,7 +165,12 @@ ol {
   color: #ffffff;
   background-color: #4d5ae5;
   cursor: pointer;
-
+  margin: 0 auto;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
 }
 
 .order-service-btn:hover {
@@ -99,6 +184,21 @@ ol {
 }
 
 /* ============ BENEFITS STYLES ============ */
+
+.container-benefits {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.benefits-list {
+  display: flex;
+  gap: 24px;
+}
+
+.benefits-list-item {
+  width: calc((100% - 72px) / 4);
+}
+
 .benefits-list-title {
   font-weight: 500;
   font-size: 20px;
@@ -120,15 +220,21 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-
 }
 
+
 /* ============ OUR TEAM STYLES ============ */
+.container-our-team {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .our-team {
   background-color: #F4F4FD
 }
 
 .our-team-list-item {
+  width: calc((100% - 72px) / 4);
   background-color: #FFFFFF
 }
 
@@ -139,6 +245,12 @@ ol {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 72px;
+}
+
+.our-team-list-list {
+  display: flex;
+  gap: 24px;
 }
 
 .our-team-list-title {
@@ -162,6 +274,19 @@ ol {
 }
 
 /* ============ OUR PORTFOLIO STYLES ============ */
+.container-portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+
+
+.portfolio-list-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .portfolio-text {
   font-weight: 400;
   font-size: 16px;
@@ -171,10 +296,17 @@ ol {
 
 }
 
-
+.portfolio-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 48px;
+}
 
 .portfolio-list-item {
   background-color: #FFFFFF;
+  width: calc((100% - 48px) / 3);
 }
 
 .section-title {
@@ -197,13 +329,27 @@ ol {
 
 }
 
-
-
-
-
 /* ============ FOOTER STYLES ============ */
+.footer-container {
+
+
+
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 264px;
+  margin: 0;
+
+
+}
+
 .page-footer {
   background-color: #2e2f42;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .logo-footer {
