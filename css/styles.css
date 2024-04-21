@@ -297,7 +297,9 @@ ol {
 }
 
 /* ============ OUR PORTFOLIO STYLES ============ */
-.container-portfolio {}
+.container-portfolio {
+  border-top: none;
+}
 
 
 .section-portfolio {
