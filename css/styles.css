@@ -331,13 +331,15 @@ ol {
   flex-direction: row;
   row-gap: 48px;
 
+
 }
 
 .portfolio-list-item {
-  background-color: #FFFFFF;
+
   width: calc((100% - 48px) / 3);
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
+  background-color: #FFFFFF;
 
 }
 
@@ -381,6 +383,7 @@ ol {
   flex-direction: column;
   width: 264px;
   margin: 0;
+  display: inline-block;
 }
 
 .page-footer {
