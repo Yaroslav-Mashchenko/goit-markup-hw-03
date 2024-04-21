@@ -297,14 +297,12 @@ ol {
 }
 
 /* ============ OUR PORTFOLIO STYLES ============ */
-.container-portfolio {
-  border-top: none;
-}
 
 
 .section-portfolio {
   padding-top: 120px;
   padding-bottom: 120px;
+  border-top: none;
 }
 
 
